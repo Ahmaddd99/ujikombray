@@ -24,10 +24,11 @@ use App\Http\Controllers\WelcomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome',[WelcomeController::class,'index']);
-});
+// Route::get('/', function () {
+//     return view('welcome',[WelcomeController::class,'index']);
+// });
 
+Route::get('/', [WelcomeController::class, 'index']);
 Route::get('register', [AuthUserController::class, 'register'])->name('register');
 Route::post('register', [AuthUserController::class, 'storeRegister'])->name('store.register');
 Route::get('login', [AuthUserController::class, 'login'])->name('login');

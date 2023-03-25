@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use datatables;
 use Carbon\Carbon;
 use App\Models\Pengaduan;
 use App\Models\Tanggapan;

@@ -512,7 +512,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4">
+            </div>
+                <div class="mt-5">
                     <h3>Pengaduan dari masyarakat lain</h3>
                 </div>
                 <div class="row">
@@ -521,11 +522,11 @@
                             <div class="card-header">
                                 <b>Total Pengaduan</b>
                             </div>
-                            <div class="card-body"></div>
+                            <div class="card-body">{{ $total_pengaduan }}</div>
                         </div>
                     </div>
-                    @forelse ($pengaduan as $item)
-                        <div class="col-md-6">
+                    @forelse ($landing as $item)
+                        <div class="col-md-4 mt-4">
                             <div class="card">
                                 <div class="card-header d-flex justify-content-between">
                                     <span>Status :</span>
@@ -542,7 +543,7 @@
                                 <div class="card-body d-flex">
                                     <h6 class="col-md-6">{{ $item->isi_laporan }}</h6>
                                     <img src="{{ asset('img/pengaduan/' . $item->foto) }}" alt="tidak ada foto"
-                                        class="rounded" width="200px" height="200px">
+                                        class="rounded" width="150px" height="150px">
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex justify-content-between">
@@ -555,7 +556,7 @@
                                 </div>
                             </div>
                         </div>
-                    @empty
+                        @empty
                     @endforelse
                 </div>
 
