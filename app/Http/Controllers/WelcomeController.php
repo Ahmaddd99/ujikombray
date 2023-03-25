@@ -16,5 +16,4 @@ class WelcomeController extends Controller
         $data = Pengaduan::where('nik', Auth::user()->nik)->get();
         return datatables()->of($data)->make(true);
     }
-
 }
